@@ -85,8 +85,8 @@ New IP header--AH Header--IP Header--TCP header--DATA
 
 
 
+# Tunnel Settings 
 
-Tunnel Settings 
 
 Authentication Methods 
 Kerberos
@@ -140,11 +140,22 @@ It's has 6 Phases before converting messages it encrypted version
 
 
 
+![[WhatsApp Image 2025-09-10 at 09.49.01_f341b263.jpg]]
+
+
+
+
 
 Aggressive mode
 It does the same work has main mode in 3 phases
 
 
+
+
+
+![[WhatsApp Image 2025-09-10 at 09.49.01_90fc49e0.jpg]]
+
+
+
 ISAKMP ( Internet Security Association and Key Management protocol)
 Is does SA by it self
-

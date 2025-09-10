@@ -1,3 +1,4 @@
+Tags:[[Desktop_Environment]]
 Centralised naming server which provides usernames to users 
 Package to install
 dnf install freeipa-server freeipa-server-dns freeipa-client -y 
@@ -31,8 +32,28 @@ TOO ADD USERS IN TERMINAL
 ipa user-add username --first=<firstname> --last=<lastname>--password
 ipa user-find username TO SEARCH FOR USERS
 
-Client Config
-dnf install freeipa-client -y INSTALLATION 
+##Client Config
+dnf install freeipa-client -y //INSTALLATION 
+nmcli connection modify ens33/32 ipv4.dns  //SERVER IP ADDRESS 
+nmcli connection down ens33/32; nmcli connection up ens 32
+ipa-client-install --server=class.codiculture.local --domain codicature.local
+authselect enable-feature with-mkhomedir
+systemctl enable --now oddjobd
+
+Reclipa server
+//IN SERVER  ipa hostgroup-add-member ipaservers --hosts client.//CLIENT
+//IN SERVER  firewall-cmd --add-service=freeipa-replication --permanent
+
+//IN CLIENT NODE firewall-cmd --add-service={freeipa-ldap,freeipa-ldaps,dns,ntp,freeipa-ldaps,dns,ntp,freeipa-replication} --permanent
+
+
+//IN REPLICA SERVER
+dnf install freeipa-server freeipa-server -dns -y
+ipa-replica-install --setup-ca --setup-dns --noforwarders
+kinit admin
+ipa user-find
+
+Replica and environment video ref dic server pt 3 and 4
 
 
 

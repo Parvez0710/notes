@@ -3,7 +3,7 @@
 
 Status:
 
-Tags: [[Service_Now]] [[NTP]] [[Proxy_Server]] [[Directory_Server]]
+Tags: [[Service_Now]] [[NTP]] [[Proxy_Server]] [[Directory_Server]] [[Desktop_Environment]]
 
 
 
